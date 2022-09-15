@@ -1,25 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace ChallengeBackend.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("auth/[controller]")]
     [ApiController]
     public class Auth : ControllerBase
     {
-        // GET: api/<Auth/>
-        [HttpGet]
-        public IEnumerable<string> Login()
+        
+        [HttpPost]        
+        public IActionResult Login(string user, string password)
         {
-            return new string[] { "value1", "value2" };
+            return Ok(); //Token
         }
 
-        // GET api/<AutenticationControllers>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        
+        [HttpPost()]
+        public IActionResult Register(string user, string password)
         {
-            return "value";
+            return Ok(); // token
         }
 
         

@@ -12,8 +12,6 @@ namespace ChallengeBackend
         public string Título { get; set; }
         public DateTime FechaDeCreación { get; set; }
         public int Calificación { get; set; }
-
-        [ForeignKey("Personaje")]
         public virtual ICollection<Personaje> Personaje { get; set; }
     }
 }

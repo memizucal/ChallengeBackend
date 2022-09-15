@@ -12,9 +12,7 @@ namespace ChallengeBackend
         public string Nombre {get; set;}
         public int Edad { get; set;}
         public int Peso { get; set;}
-        public string Historia { get; set;}
-
-        [ForeignKey("PelículaOSerie")]
+        public string Historia { get; set;}  
         public virtual ICollection<PelículaOSerie> PelículaOSerie { get; set; }
         
     }
